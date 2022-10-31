@@ -48,7 +48,10 @@ namespace DTC.UI.Aircrafts.F16
             this.chkHARM = new System.Windows.Forms.CheckBox();
             this.chkHTS = new System.Windows.Forms.CheckBox();
             this.chkTOS = new System.Windows.Forms.CheckBox();
+
             this.chkPUP = new System.Windows.Forms.CheckBox();
+
+
             this.SuspendLayout();
             // 
             // chkMFDs
@@ -245,11 +248,13 @@ namespace DTC.UI.Aircrafts.F16
             this.chkPUP.Text = "Pop-Up Profile";
             this.chkPUP.UseVisualStyleBackColor = true;
             // 
+
             // UploadToJetPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
+
             this.Controls.Add(this.chkPUP);
             this.Controls.Add(this.chkTOS);
             this.Controls.Add(this.chkHTS);
@@ -288,6 +293,8 @@ namespace DTC.UI.Aircrafts.F16
         private System.Windows.Forms.CheckBox chkHARM;
         private System.Windows.Forms.CheckBox chkHTS;
         private System.Windows.Forms.CheckBox chkTOS;
+
         private System.Windows.Forms.CheckBox chkPUP;
+
     }
 }
