@@ -84,12 +84,20 @@
     <Compile Include="Models\DCS\IAircraftDeviceManager.cs" />
     <Compile Include="Models\F16\Misc\MiscSystem.cs" />
     <Compile Include="Models\DCS\BaseBuilder.cs" />
+    <Compile Include="Models\F16\PUP\DEDConfiguration.cs" />
+    <Compile Include="Models\F16\PUP\DEDpg.cs" />
+    <Compile Include="Models\F16\PUP\PUPprofile.cs" />
+    <Compile Include="Models\F16\PUP\PUPSystem.cs" />
+    <Compile Include="Models\F16\TOS\TOSSetting.cs" />
+    <Compile Include="Models\F16\TOS\TOSSystem.cs" />
     <Compile Include="Models\F16\Upload\CMSBuilder.cs" />
     <Compile Include="Models\F16\Upload\HARMBuilder.cs" />
+    <Compile Include="Models\F16\Upload\TOSBuilder.cs" />
     <Compile Include="Models\F16\Upload\HTSBuilder.cs" />
     <Compile Include="Models\F16\Upload\MFDBuilder.cs" />
     <Compile Include="Models\F16\Upload\MiscBuilder.cs" />
     <Compile Include="Models\F16\Upload\RadioBuilder.cs" />
+    <Compile Include="Models\F16\Upload\PUPBuilder.cs" />
     <Compile Include="Models\F16\Upload\WaypointBuilder.cs" />
     <Compile Include="Models\Presets\AircraftModel.cs" />
     <Compile Include="Models\Presets\PresetChangedCallback.cs" />
@@ -112,6 +120,12 @@
     <Compile Include="Models\Presets\Aircraft.cs" />
     <Compile Include="Models\Presets\Preset.cs" />
     <Compile Include="Models\WaypointDB\WaypointDB.cs" />
+    <Compile Include="UI\Aircrafts\F16\PUPPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\PUPPage.Designer.cs">
+      <DependentUpon>PUPPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Aircrafts\F16\HARMPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,11 +144,20 @@
     <Compile Include="UI\Aircrafts\F16\MiscPage.Designer.cs">
       <DependentUpon>MiscPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Aircrafts\F16\TOSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\TOSPage.Designer.cs">
+      <DependentUpon>TOSPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Base\Controls\DTCCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Base\Controls\DTCCheckBox.Designer.cs">
       <DependentUpon>DTCCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\Controls\kikakuLabel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Base\GlobalHotKey.cs" />
     <Compile Include="UI\Base\SortableBindingList.cs" />
@@ -282,11 +305,17 @@
     <Compile Include="UI\CommonPages\PresetsPage.Designer.cs">
       <DependentUpon>PresetsPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Aircrafts\F16\PUPPage.resx">
+      <DependentUpon>PUPPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Aircrafts\F16\HARMPage.resx">
       <DependentUpon>HARMPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Aircrafts\F16\HTSPage.resx">
       <DependentUpon>HTSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\TOSPage.resx">
+      <DependentUpon>TOSPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Base\Controls\DTCBreadCrumb.resx">
       <DependentUpon>DTCBreadCrumb.cs</DependentUpon>
@@ -394,11 +423,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\F16.png" />
+    <None Include="Resources\apply.png" />
     <Content Include="Resources\Iconleak-Atrous-Disk.ico" />
     <None Include="Resources\Waypoints.png" />
     <Content Include="Structure.txt" />
     <None Include="Resources\2560px-Brown-dominant__highland__ERDL_camouflage_pattern_swatch.svg.png" />
     <None Include="Resources\tablet.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

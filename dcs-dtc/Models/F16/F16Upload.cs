@@ -31,8 +31,12 @@ namespace DTC.Models
 				var waypointBuilder = new WaypointBuilder(_cfg, f16, sb);
 				waypointBuilder.Build();
 			}
-
-			if (_cfg.Radios.EnableUpload)
+            if (_cfg.PUP.EnableUpload)
+            {
+                var pupBuilder = new PUPBuilder(_cfg, f16, sb);
+                pupBuilder.Build();
+            }
+            if (_cfg.Radios.EnableUpload)
 			{
 				var radioBuilder = new RadioBuilder(_cfg, f16, sb);
 				radioBuilder.Build();
@@ -66,6 +70,12 @@ namespace DTC.Models
 			{
 				var htsBuilder = new HTSBuilder(_cfg, f16, sb);
 				htsBuilder.Build();
+			}
+
+			if (_cfg.TOS.EnableUpload)
+			{
+				var tosBuilder = new TOSBuilder(_cfg, f16, sb);
+				tosBuilder.Build();
 			}
 
 			if (sb.Length > 0)

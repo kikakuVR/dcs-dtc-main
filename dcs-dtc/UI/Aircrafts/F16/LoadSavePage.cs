@@ -51,7 +51,12 @@ namespace DTC.UI.Aircrafts.F16
 					chkLoadWaypoints.Enabled = true;
 					enableLoad = true;
 				}
-				if (_configToLoad.CMS != null)
+                if (_configToLoad.PUP != null)
+                {
+                    chkLoadPUP.Enabled = true;
+                    enableLoad = true;
+                }
+                if (_configToLoad.CMS != null)
 				{
 					chkLoadCMS.Enabled = true;
 					enableLoad = true;
@@ -74,6 +79,11 @@ namespace DTC.UI.Aircrafts.F16
 				if (_configToLoad.HTS != null)
 				{
 					chkLoadHTS.Enabled = true;
+					enableLoad = true;
+				}
+				if (_configToLoad.TOS != null)
+				{
+					chkLoadTOS.Enabled = true;
 					enableLoad = true;
 				}
 				if (_configToLoad.Misc != null)
@@ -104,7 +114,16 @@ namespace DTC.UI.Aircrafts.F16
 				load = true;
 			}
 
-			if (!chkLoadCMS.Checked)
+            if (!chkLoadPUP.Checked)
+            {
+                cfg.PUP = null;
+            }
+            else
+            {
+                load = true;
+            }
+
+            if (!chkLoadCMS.Checked)
 			{
 				cfg.CMS = null;
 			}
@@ -149,6 +168,15 @@ namespace DTC.UI.Aircrafts.F16
 				load = true;
 			}
 
+			if (!chkLoadTOS.Checked)
+			{
+				cfg.TOS = null;
+			}
+			else
+			{
+				load = true;
+			}
+
 			if (!chkLoadMisc.Checked)
 			{
 				cfg.Misc = null;
@@ -173,7 +201,11 @@ namespace DTC.UI.Aircrafts.F16
 			{
 				cfg.Waypoints = null;
 			}
-			if (!chkSaveCMS.Checked)
+            if (!chkSavePUP.Checked)
+            {
+                cfg.PUP = null;
+            }
+            if (!chkSaveCMS.Checked)
 			{
 				cfg.CMS = null;
 			}
@@ -192,6 +224,10 @@ namespace DTC.UI.Aircrafts.F16
 			if (!chkSaveHTS.Checked)
 			{
 				cfg.HTS = null;
+			}
+			if (!chkSaveTOS.Checked)
+			{
+				cfg.TOS = null;
 			}
 			if (!chkSaveMisc.Checked)
 			{
@@ -214,11 +250,13 @@ namespace DTC.UI.Aircrafts.F16
 		private void DisableLoadControls()
 		{
 			chkLoadWaypoints.Enabled = false;
+            chkLoadPUP.Enabled = false;
 			chkLoadCMS.Enabled = false;
 			chkLoadRadios.Enabled = false;
 			chkLoadMFDs.Enabled = false;
 			chkLoadHARM.Enabled = false;
 			chkLoadHTS.Enabled = false;
+			chkLoadTOS.Enabled = false;
 			chkLoadMisc.Enabled = false;
 			btnLoadApply.Enabled = false;
 		}
@@ -242,5 +280,5 @@ namespace DTC.UI.Aircrafts.F16
 			grpSave.Visible = true;
 			DisableLoadControls();
 		}
-	}
+    }
 }

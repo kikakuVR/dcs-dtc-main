@@ -52,6 +52,10 @@ namespace DTC.Models.F16
 			hotas.AddCommand(new Command(3030, "CENTER", -1, 0));
 			AddDevice(hotas);
 
+            
+            
+
+
 			var leftMFD = new Device(24, "LMFD");
 			leftMFD.AddCommand(new Command(3012, "OSB-12-PG3", delayMFDs, 1));
 			leftMFD.AddCommand(new Command(3013, "OSB-13-PG2", delayMFDs, 1));

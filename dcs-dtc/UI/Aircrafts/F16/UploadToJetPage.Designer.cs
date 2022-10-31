@@ -47,6 +47,8 @@ namespace DTC.UI.Aircrafts.F16
             this.chkMisc = new System.Windows.Forms.CheckBox();
             this.chkHARM = new System.Windows.Forms.CheckBox();
             this.chkHTS = new System.Windows.Forms.CheckBox();
+            this.chkTOS = new System.Windows.Forms.CheckBox();
+            this.chkPUP = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // chkMFDs
@@ -158,7 +160,7 @@ namespace DTC.UI.Aircrafts.F16
             this.btnUpload.FlatAppearance.BorderSize = 0;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpload.Location = new System.Drawing.Point(16, 266);
+            this.btnUpload.Location = new System.Drawing.Point(16, 291);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(120, 25);
             this.btnUpload.TabIndex = 7;
@@ -216,11 +218,40 @@ namespace DTC.UI.Aircrafts.F16
             this.chkHTS.UseVisualStyleBackColor = true;
             this.chkHTS.CheckedChanged += new System.EventHandler(this.chkHTS_CheckedChanged);
             // 
+            // chkTOS
+            // 
+            this.chkTOS.Checked = true;
+            this.chkTOS.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkTOS.Location = new System.Drawing.Point(16, 249);
+            this.chkTOS.Margin = new System.Windows.Forms.Padding(4);
+            this.chkTOS.Name = "chkTOS";
+            this.chkTOS.Size = new System.Drawing.Size(323, 25);
+            this.chkTOS.TabIndex = 10;
+            this.chkTOS.Text = "ToS";
+            this.chkTOS.UseVisualStyleBackColor = true;
+            this.chkTOS.CheckedChanged += new System.EventHandler(this.chkTOS_CheckedChanged);
+            // 
+            // chkPUP
+            // 
+            this.chkPUP.Checked = true;
+            this.chkPUP.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkPUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkPUP.Location = new System.Drawing.Point(294, 150);
+            this.chkPUP.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPUP.Name = "chkPUP";
+            this.chkPUP.Size = new System.Drawing.Size(140, 25);
+            this.chkPUP.TabIndex = 11;
+            this.chkPUP.Text = "Pop-Up Profile";
+            this.chkPUP.UseVisualStyleBackColor = true;
+            // 
             // UploadToJetPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.Controls.Add(this.chkPUP);
+            this.Controls.Add(this.chkTOS);
             this.Controls.Add(this.chkHTS);
             this.Controls.Add(this.chkHARM);
             this.Controls.Add(this.btnUpload);
@@ -256,5 +287,7 @@ namespace DTC.UI.Aircrafts.F16
 		private System.Windows.Forms.CheckBox chkMisc;
         private System.Windows.Forms.CheckBox chkHARM;
         private System.Windows.Forms.CheckBox chkHTS;
+        private System.Windows.Forms.CheckBox chkTOS;
+        private System.Windows.Forms.CheckBox chkPUP;
     }
 }
