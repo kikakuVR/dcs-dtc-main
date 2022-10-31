@@ -3,6 +3,10 @@
 https://github.com/the-paid-actor/dcs-dtc
 
 This is a mod for DCS that works as a DTC (Data Cartridge) for the F-16 and F/A-18.
+****kikakuVR's Edit adds PUP (Pop-up attack profile) parameter upload --
+  this includes DED entry for VRP/PUP/OA1/2 for pre-calculated pop-up attack runs
+  Pop-up Attack Calculator: https://www.digitalcombatsimulator.com/en/files/3325532/
+  WIP ***** Oct 2022
 
 Features:
 
